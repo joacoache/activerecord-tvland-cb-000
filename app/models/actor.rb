@@ -8,7 +8,7 @@ class Actor < ActiveRecord::Base
 
   def list_roles
     array = []
-    self.characters.each {|i| array << i}
+    self.characters.each {|i| array << "#{i.name} - #{i.show.name}"}
     array
   end
 end
